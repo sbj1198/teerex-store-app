@@ -8,11 +8,10 @@ export const SearchInput = () => {
   const dispatch = useDispatch();
 
   const handleSearch = (e) => {
-    setSearchQuery((prev) => e.target.value);
-    if (searchQuery) {
-      const words = searchQuery.trim().toLowerCase().split(/\s+/);
-      dispatch(searchProduct(words));
-    }
+    const words = e.target.value.trim().toLowerCase().split(/\s+/);
+    setSearchQuery(e.target.value);
+    
+    dispatch(searchProduct(words));
   };
 
   return (

@@ -5,6 +5,7 @@ const initialState = {
   isError: false,
   tshirts: [],
   cart: [],
+  searchedData: [],
 };
 
 export const reducer = (state = initialState, { type, payload }) => {
@@ -83,7 +84,8 @@ export const reducer = (state = initialState, { type, payload }) => {
           : state.tshirts;
       return {
         ...state,
-        tshirts: filteredTshirts,
+        isLoading: false,
+        searchedData: filteredTshirts,
       };
 
     case types.SEARCH_PRODUCT_FAILURE:

@@ -22,6 +22,7 @@ export const Home = () => {
   const tshirts = useSelector((store) => store.tshirts);
   const [checked, setChecked] = React.useState([]);
   const [filteredData, setFilteredData] = React.useState([]);
+  const searchedData = useSelector((store) => store.searchedData);
 
   const handleSelectBox = (e) => {
     let updatedList = [...checked];
@@ -114,7 +115,13 @@ export const Home = () => {
               borderStyle="dashed"
             >
               <Products
-                tshirts={filteredData.length ? filteredData : tshirts}
+                tshirts={
+                  filteredData.length
+                    ? filteredData
+                    : searchedData.length
+                    ? searchedData
+                    : tshirts
+                }
               />
             </Box>
           </Box>

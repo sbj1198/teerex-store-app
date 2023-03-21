@@ -41,7 +41,7 @@ export const Navbar = () => {
                 <VisuallyHidden>Toggle Menu</VisuallyHidden>
                 <Box as={MdMenu} fontSize="3xl" />
               </Center>
-              <Img src={logo} h="60px" w="300px" />
+              <Img src={logo} h="30px" w="150px" />
             </HStack>
           </Flex>
           <SearchInput />
@@ -62,7 +62,7 @@ export const Navbar = () => {
             {/* <HStack flex="24rem" spacing="32px"> */}
             <HStack flex="12rem" spacing="32px">
               <Link as={RouteLink} to="/">
-                <Img src={logo} h="60px" w="300px" />
+                <Img src={logo} h="30px" w="300px" />
               </Link>
             </HStack>
             <Box width="full" mx="8">
